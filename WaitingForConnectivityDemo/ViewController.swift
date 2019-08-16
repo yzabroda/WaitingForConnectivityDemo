@@ -25,6 +25,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func doLoad(_ sender: UIButton) {
+        infoMessageLabel.text = ""
+        contentTextView.text = ""
+
         WebServices.shared.callingApple { content, error in
             if let error = error {
                 DispatchQueue.main.async {
